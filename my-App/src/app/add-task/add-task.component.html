@@ -1,0 +1,23 @@
+<h2>Create new task</h2>
+<form [formGroup]="creationForm" (ngSubmit)="create()">
+    <label>
+        <span>Task name:</span>
+        <input formControlName="name" type="text">
+    </label>
+    <label>
+        <span>Deadline:</span>
+        <input formControlName="date" type="date">
+    </label>
+    <label>
+        <span>Status:</span>
+        <input formControlName="isChecked" type="checkbox">
+    </label>
+    <label>
+        <span>Important:</span>
+        <input formControlName="isImportant" type="checkbox">
+    </label>
+    <div>
+        <button type="submit">Create</button>
+        <button type="reset">Cancel</button>
+    </div>
+</form>

@@ -1,0 +1,8 @@
+<li [class.important]="task.isImportant"  [class.done]="task.isChecked">
+    <span (click)="changeStatus()">{{task.name}}</span>
+    @if(task.date != null)
+    {   
+        <span class="deadline">{{task.date | date:'longDate'}}</span>
+    }
+    <button class="delete" (click)="remove()">X</button>
+</li>
